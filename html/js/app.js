@@ -5,7 +5,7 @@ const Targeting = Vue.createApp({
             ChangeTextIconColor: false, // This is if you want to change the color of the icon next to the option text with the text color
             StandardEyeIcon: "far fa-eye", // This is the default eye icon
             CurrentIcon: this.StandardEyeIcon, // leave this
-            SuccessColor: "rgb(30, 144, 255)", // This is the color when the target has found the option
+            SuccessColor: "rgb(128, 128, 128)", // This is the color when the target has found the option
             StandardColor: "white", // This is the standard color, change this to the same as the StandardColor if you have changed it
             TargetEyeStyleObject: {
                 color: this.StandardColor, // leave this
@@ -128,7 +128,7 @@ const Targeting = Vue.createApp({
 
                     if (this.ChangeTextIconColor) {
                         this.targetLabel.innerHTML +=
-                        `<div id="target-option-${index}" style="margin-bottom: 1vh; color: ${this.StandardColor}">
+                            `<div id="target-option-${index}" style="margin-bottom: 1vh; color: ${this.StandardColor}">
                             <span id="target-icon-${index}" style="color: ${this.StandardColor}">
                                 <i class="${itemData.icon}"></i>
                             </span>
@@ -136,7 +136,7 @@ const Targeting = Vue.createApp({
                         </div>`;
                     } else {
                         this.targetLabel.innerHTML +=
-                        `<div id="target-option-${index}" style="margin-bottom: 1vh; color: ${this.StandardColor}">
+                            `<div id="target-option-${index}" style="margin-bottom: 1vh; color: ${this.StandardColor}">
                             <span id="target-icon-${index}" style="color: ${this.SuccessColor}">
                                 <i class="${itemData.icon}"></i>
                             </span>
