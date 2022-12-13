@@ -78,11 +78,112 @@ Config.PolyZones = {
 }
 
 Config.TargetBones = {
+	["main"] = {
+        bones = {
+            "seat_dside_f",
+            "seat_pside_f",
+            "seat_dside_r",
+            "seat_pside_r",
+            "door_dside_f",
+            "door_dside_r",
+            "door_pside_f",
+            "door_pside_r",
+            "hbgrip_l",
+            "hbgrip_r"
+        },
+        options = {
+            {
+                type = "client",
+                event = "craft:vehmenu",
+                icon = "fad fa-key",
+                label = "Fordonsmeny",
+                job = "otto",
+            },
+            {
+                type = "client",
+                event = "police:client:PutPlayerInVehicle",
+                icon = "fas fa-chevron-circle-left",
+                label = "Placera i fordon",
+            },
+            {
+                type = "client",
+                event = "police:client:SetPlayerOutVehicle",
+                icon = "fas fa-chevron-circle-right",
+                label = "Ta ut ur fordon",
+            },
+            {
+                type = "client",
+                event = "police:client:ImpoundVehicle",
+                icon = "fas fa-car",
+                label = "Beslagta fordon",
+                job = 'police'
+            },
+			{
+                type = "client",
+                event = "qb-tunerchip:client:TuneStatus",
+                icon = "fas fa-car",
+                label = "Kolla trimning",
+                job = 'police'
+            },
+			{
+                type = "client",
+                event = "qb-tow:client:TowVehicle",
+                icon = "fas fa-car",
+                label = "Bärga",
+                job = 'tow',
+            },
+            {
+                type = "client",
+                event = "vehiclekeys:server:GiveVehicleKeys",
+                icon = "fa-solid fa-key",
+                label = "Ge nycklar",
+            },
+            {
+                type = "client",
+                event = "flipvehicle",
+                label = 'Vält bilen rätt',
+                icon = 'fas fa-chevron-circle-up',
+            },
+        },
+        distance = 3.0
+    },
 
 }
 
 Config.TargetModels = {
-
+	["qb-bbq"] = {
+        models = {
+            1903501406,
+            286252949,
+            519797612,
+            -476379988
+        },
+        options = {
+            {
+                type = "client", 
+                event = "qb-bbq:BBQMenu", 
+                icon = 'fas fa-burger', 
+                label = 'Tillaga', 
+            }
+        },
+        distance = 2.5,
+    },
+    ["yoga"] = {
+        models = {
+            -1978741854,
+            2057317573,
+            -232023078
+        },
+    options = {
+        {
+            type = "client",
+            event = "yoga:start",
+            icon = "fas fa-yin-yang",
+            label = "Gör yoga",
+        },
+    },
+    distance = 2.5
+  }
 }
 
 Config.GlobalPedOptions = {
@@ -98,6 +199,89 @@ Config.GlobalObjectOptions = {
 }
 
 Config.GlobalPlayerOptions = {
+	options = {
+        {
+            type = "client",
+            event = "qb-phone:client:GiveContactDetails",
+            icon = "fas fa-address-book",
+            label = "Ge kontaktdetaljer",
+        },
+        {
+            event = "police:client:RobPlayer",
+            icon = "fas fa-user-secret",
+            label = "Råna person",
+        },
+        {
+            type = "client",
+            event = "police:client:CuffPlayer",
+            icon = "fas fa-hands",
+            label = "Handfängsla",
+            job = "police",
+            item = 'handcuffs',
+        },
+        {
+          type = "client",
+          event = "police:client:EscortPlayer",
+          icon = "fas fa-key",
+          label = "Eskortera",
+        },
+        {
+            type = "client",
+            event = "police:client:PutPlayerInVehicle",
+            icon = "fas fa-chevron-circle-left",
+            job = 'police',
+            label = "Placera i fordon",
+        },
+        {
+            type = "client",
+            event = "police:client:SetPlayerOutVehicle",
+            icon = "fas fa-chevron-circle-right",
+            job = 'police',
+            label = "Ta ut ur fordon",
+        },
+		{
+            type = "client",
+            event = "police:client:SeizeDriverLicense",
+            icon = "fas fa-chevron-circle-right",
+            job = 'police',
+            label = "Dra in körkortet",
+        },
+		{
+            type = "client",
+            event = "police:client:JailPlayer",
+            icon = "fas fa-chevron-circle-right",
+            job = 'police',
+            label = "Sätt in i fängelse",
+        },
+		{
+            type = "client",
+            event = "police:client:SearchPlayer",
+            icon = "fas fa-chevron-circle-right",
+            job = 'police',
+            label = "Sök igenom",
+        },
+		{
+            type = "client",
+            event = "hospital:client:RevivePlayer",
+            icon = "fas fa-chevron-circle-right",
+            job = 'ambulance',
+            label = "Återuppliva",
+        },
+		{
+            type = "client",
+            event = "hospital:client:CheckStatus",
+            icon = "fas fa-chevron-circle-right",
+            job = 'ambulance',
+            label = "Hälsostatus",
+        },
+		{
+            type = "client",
+            event = "hospital:client:TreatWounds",
+            icon = "fas fa-chevron-circle-right",
+            job = 'ambulance',
+            label = "Behandla skador",
+        },
+    }
 
 }
 
